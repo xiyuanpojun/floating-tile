@@ -71,6 +71,14 @@ public class MainFragment extends PreferenceFragmentCompat {
                 return false;
             }
         });
+        findPreference("setRule").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                startActivity(new Intent(APPApplication.getApplication(), SetRuleActivity.class));
+                MainActivity.getMainActivity().finish();
+                return false;
+            }
+        });
         findPreference("sendNotification").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {

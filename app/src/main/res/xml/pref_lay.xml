@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:title="权限">
+    <PreferenceCategory android:title="权限">
 
         <Preference
             android:key="notificatListen"
@@ -15,18 +13,21 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="Hello!" />
+    <PreferenceCategory android:title="Hello!" />
+
+    <Preference
+        android:key="setRule"
+        android:title="设置规则" />
 
     <Preference
         android:key="sendNotification"
         android:title="发送一条通知" />
 
     <EditTextPreference
+        android:defaultValue="6"
+        android:inputType="number"
         android:key="tileShowNum"
         android:summary="在屏幕内最多可显示的磁贴数量"
-        android:inputType="number"
-        android:defaultValue="6"
         android:title="磁贴数量" />
 
     <Preference
@@ -34,10 +35,10 @@
         android:title="修改磁贴位置" />
 
     <ListPreference
-        android:key="tileDirection"
         android:defaultValue="up"
         android:entries="@array/array_position_entries"
         android:entryValues="@array/array_position_entries_values"
+        android:key="tileDirection"
         android:title="磁贴方向" />
 
     <Preference

@@ -15,21 +15,28 @@ import com.lingc.nfloatingtile.util.SpUtil;
 /**
  * 1.0.190807
  * Hello World
- *
+ * <p>
  * 1.1.190808
  * 悬浮磁贴图标增加圆角
  * 优化删除全部磁贴功能
  * 解决显示空白磁贴的问题
  * 优化其他内容
- *
+ * <p>
  * 1.2.190813
  * 加入了 输入法防挡 功能
  */
 public class MainActivity extends AppCompatActivity {
 
+    private static MainActivity mainActivity;
+
+    public static MainActivity getMainActivity() {
+        return mainActivity;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mainActivity = this;
         setContentView(R.layout.activity_main);
         if (Build.VERSION.SDK_INT >= 23) {
             Window window = getWindow();
